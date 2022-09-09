@@ -142,13 +142,14 @@ fi
 if $pre_release
 then
     echo -e "Bumping tag ${pre_tag}. \n\tNew tag ${new}"
+    echo ::set-output name=pre_tag::$pre_tag
 else
     echo -e "Bumping tag ${tag}. \n\tNew tag ${new}"
+    echo ::set-output name=pre_tag::$tag
 fi
 
 # set outputs
 echo ::set-output name=new_tag::$new
-echo ::set-output name=pre_tag::$tag
 echo ::set-output name=part::$part
 
 # use dry run to determine the next tag
