@@ -148,7 +148,7 @@ fi
 
 # set outputs
 echo ::set-output name=new_tag::$new
-echo ::set-output name=pre_tag::$pre_tag
+echo ::set-output name=pre_tag::$tag
 echo ::set-output name=part::$part
 
 # use dry run to determine the next tag
